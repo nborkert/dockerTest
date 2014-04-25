@@ -1,7 +1,7 @@
 dockerTest
 ==========
 
-Docker build scripts and shell scripts to demonstrate on-demand testing capabilities.
+Docker build scripts and shell scripts to demonstrate on-demand testing capabilities. The test is simple and found in the Dockerfile in this repository: download web content and grep for a specified word. This concept can be extended to run web integration tests upon startup. 
 
 Files: <p>
 firstTest - Dockerfile containing content and test <p>
