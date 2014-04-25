@@ -9,15 +9,10 @@ RUN apt-get -y update
 RUN echo "oracle-java7-installer shared/accepted-oracle-license-v1-1 boolean true" | debconf-set-selections
 # Install Oracle Java
 RUN apt-get -y install oracle-java7-installer
-# Install tomcat
-RUN apt-get -y install tomcat7
-RUN echo "JAVA_HOME=/usr/lib/jvm/java-7-oracle" >> /etc/default/tomcat7
-#EXPOSE 8080
+
 # Download web content to test
 RUN mkdir /test
 RUN wget http://www.docker.io -P /test
 ENTRYPOINT grep -r 'Linux' /test | wc -l
-# Start Tomcat, after starting Tomcat the container will stop. So use a 'trick' to keep it running.
-#CMD service tomcat7 start && tail -f /var/lib/tomcat7/logs/catalina.out
 
 
