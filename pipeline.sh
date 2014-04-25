@@ -1,7 +1,7 @@
 #!/bin/bash
 
 docker build -t $1 - < firstTest
-WC=`docker run --cidfile="$1.cid" piptest`
+WC=`docker run --cidfile="$1.cid" $1`
 
 CID=`cat $1.cid`
 
