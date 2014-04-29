@@ -17,4 +17,7 @@ This will execute the test and push the image named as desiredTestName.
 
 ***
 To improve: <p>
-As of the initial commit, the test result as emitted by the Docker run is coupled with the pipeline.sh script. An improvement would remove that coupling. 
+As of the initial commit, the test result as emitted by the Docker run is coupled with the pipeline.sh script. An improvement would remove that coupling.
+
+***
+Extremely impressed with Docker's approach. docker build, docker run, Docker done. 
